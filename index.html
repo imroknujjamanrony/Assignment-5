@@ -15,7 +15,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-lexend">
-    <header class="sticky top-0 overflow-hidden backdrop-blur-2xl pb-4">
+    <header class="sticky top-0 overflow-hidden lg:backdrop-blur-2xl pb-4">
       <nav class="w-11/12 mx-auto bg-[#F9F7F3] pb-8">
         <!-- nav start -->
         <div class="navbar">
@@ -81,9 +81,14 @@
             <div>
               <!-- coin logo of card -->
               <div class="w-[120px]">
-                <div class="gap-2 flex justify-center py-2 bg-[#a59f9fe0]">
+                <div class="gap-2 flex justify-start py-2 bg-[#a59f9fe0]">
                   <img src="./assets/coin.png" alt="" />
-                  <p class="text-[#111111B3] text-xl font-medium">0 BDT</p>
+                  <div
+                    id="card-balance-1"
+                    class="text-[#111111B3] text-xl font-medium"
+                  >
+                    500 BDT
+                  </div>
                 </div>
               </div>
               <h2 class="text-[#111111] text-xl font-bold mt-4">
@@ -104,32 +109,39 @@
                 need.
               </p>
               <input
+                id="inputfield-1"
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered input-sm w-full"
               />
 
-              <button class="w-full bg-[#B4F461] rounded-lg py-1 mt-2">
+              <button
+                id="donate-now-btn"
+                class="w-full bg-[#B4F461] rounded-lg py-1 mt-2"
+              >
                 Donate Now
               </button>
             </div>
           </div>
           <!-- modal div -->
-          <div class="hidden">
+          <div class="">
             <!-- Open the modal using ID.showModal() method -->
             <button class="btn" onclick="my_modal_5.showModal()">
               open modal
             </button>
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
               <div class="modal-box">
-                <h3 class="text-lg font-bold">Hello!</h3>
-                <p class="py-4">
-                  Press ESC key or click the button below to close
-                </p>
-                <div class="modal-action">
+                <h3 class="text-2xl font-extrabold text-center">Congrates!</h3>
+                <span class="flex justify-center py-4">
+                  <img src="./assets/coin.png" alt="" />
+                </span>
+                <p class="py-4 text-center">You Have Donated For Human Kind</p>
+                <p class="text-center text-xl font-semibold">Successfully</p>
+
+                <div class="modal-action flex justify-center">
                   <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn">Close</button>
+                    <button class="btn">Close Notification</button>
                   </form>
                 </div>
               </div>
@@ -241,6 +253,12 @@
           </div>
         </div>
       </section>
+      <section>
+        <!-- history div -->
+        <div class="hidden"></div>
+      </section>
     </main>
+    <script src="./common.js"></script>
+    <script src="./app/function.js"></script>
   </body>
 </html>
