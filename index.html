@@ -53,11 +53,13 @@
         <!-- button div -->
         <div class="text-center mt-12">
           <button
+            id="donate-btn"
             class="btn btn-active text-[#111111] bg-[#B4F461] font-semibold text-xl"
           >
             Donation
           </button>
           <button
+            id="history-btn"
             class="btn btn-active text-[#111111B3] font-medium text-xl bg-[#ffffff]"
           >
             History
@@ -67,7 +69,7 @@
     </header>
 
     <main>
-      <section class="w-11/12 mx-auto bg-[#FFFFFF] mb-32">
+      <section id="section-1" class="w-11/12 mx-auto bg-[#FFFFFF] mb-32">
         <!-- card div start here -->
         <div class="bg-[#FFFFFF] rounded-2xl mt-12 space-y-5">
           <!-- card-1 -->
@@ -93,7 +95,10 @@
                   </div>
                 </div>
               </div>
-              <h2 class="text-[#111111] text-xl font-bold mt-4">
+              <h2
+                id="card-title-1"
+                class="text-[#111111] text-xl font-bold mt-4"
+              >
                 Donate for Flood at Noakhali, Bangladesh
               </h2>
               <p
@@ -128,7 +133,7 @@
           <!-- modal div -->
           <div>
             <!-- Open the modal using ID.showModal() method -->
-            <button class="btn" onclick="my_modal_5.showModal()">
+            <button class="btn hidden" onclick="my_modal_5.showModal()">
               open modal
             </button>
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
@@ -165,10 +170,18 @@
               <div class="w-[120px]">
                 <div class="gap-2 flex justify-center py-2 bg-[#a59f9fe0]">
                   <img src="./assets/coin.png" alt="" />
-                  <p class="text-[#111111B3] text-xl font-medium">600 BDT</p>
+                  <div
+                    id="card-balance-2"
+                    class="text-[#111111B3] text-xl font-medium"
+                  >
+                    600 BDT
+                  </div>
                 </div>
               </div>
-              <h2 class="text-[#111111] text-xl font-bold mt-4">
+              <h2
+                id="card-title-2"
+                class="text-[#111111] text-xl font-bold mt-4"
+              >
                 Donate for Flood Relief in Feni,Bangladesh
               </h2>
               <p
@@ -188,12 +201,16 @@
                 consider donating today to assist those in urgent need.
               </p>
               <input
+                id="inputfield-2"
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered input-sm w-full"
               />
 
-              <button class="w-full bg-[#B4F461] rounded-lg py-1 mt-2">
+              <button
+                id="donate-now-btn-2"
+                class="w-full bg-[#B4F461] rounded-lg py-1 mt-2"
+              >
                 Donate Now
               </button>
             </div>
@@ -216,10 +233,18 @@
               <div class="w-[140px]">
                 <div class="gap-2 flex justify-center py-2 bg-[#a59f9fe0]">
                   <img src="./assets/coin.png" alt="" />
-                  <p class="text-[#111111B3] text-xl font-medium">2400 BDT</p>
+                  <div
+                    id="card-balance-3"
+                    class="text-[#111111B3] text-xl font-medium"
+                  >
+                    2400 BDT
+                  </div>
                 </div>
               </div>
-              <h2 class="text-[#111111] text-xl font-bold mt-4">
+              <h2
+                id="card-title-3"
+                class="text-[#111111] text-xl font-bold mt-4"
+              >
                 Aid for Injured in the Quota Movement
               </h2>
               <p
@@ -243,12 +268,16 @@
                 need.
               </p>
               <input
+                id="inputfield-3"
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered input-sm w-full"
               />
 
-              <button class="w-full bg-[#B4F461] rounded-lg py-1 mt-2">
+              <button
+                id="donate-now-btn-3"
+                class="w-full bg-[#B4F461] rounded-lg py-1 mt-2"
+              >
                 Donate Now
               </button>
             </div>
@@ -256,8 +285,8 @@
         </div>
       </section>
       <section>
-        <!-- history div -->
-        <div class="hidden"></div>
+        <!-- history section -->
+        <section id="history-section" class="hidden"></section>
       </section>
     </main>
     <script src="./common.js"></script>
