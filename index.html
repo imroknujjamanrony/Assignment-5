@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,12 +15,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-lexend">
-    <header>
+    <header class="sticky top-0 overflow-hidden backdrop-blur-2xl pb-4">
       <nav class="w-11/12 mx-auto bg-[#F9F7F3] pb-8">
         <!-- nav start -->
         <div class="navbar">
           <div class="navbar-start">
-            <a class="btn btn-success text-xl bg-[#B4F461]">Blog</a>
+            <a
+              class="btn btn-success text-xl bg-[#B4F461]"
+              href="http://127.0.0.1:5500/blog.html"
+              >Blog</a
+            >
           </div>
           <div class="navbar-center flex gap-3">
             <!-- text and logo div  -->
@@ -43,13 +47,12 @@
           </div>
         </div>
       </nav>
-    </header>
-
-    <main>
-      <section class="w-11/12 mx-auto bg-[#FFFFFF] mb-32">
+      <div>
         <!-- button div -->
         <div class="text-center mt-12">
-          <button class="btn btn-active text-[#111111] font-semibold text-xl">
+          <button
+            class="btn btn-active text-[#111111] bg-[#B4F461] font-semibold text-xl"
+          >
             Donation
           </button>
           <button
@@ -58,10 +61,15 @@
             History
           </button>
         </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="w-11/12 mx-auto bg-[#FFFFFF] mb-32">
         <!-- card div start here -->
-        <div class="bg-[#FFFFFF] rounded-2xl mt-12">
+        <div class="bg-[#FFFFFF] rounded-2xl mt-12 space-y-5">
           <!-- card-1 -->
-          <div class="flex flex-col gap-20 shadow-2xl py-4 px-4 lg:flex-row">
+          <div class="flex flex-col gap-20 shadow-md py-4 px-4 lg:flex-row">
             <div class="lg:w-[550px] lg:ml-8">
               <img
                 class="lg:w-full h-[300px] rounded-lg"
@@ -106,9 +114,30 @@
               </button>
             </div>
           </div>
+          <!-- modal div -->
+          <div class="hidden">
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn" onclick="my_modal_5.showModal()">
+              open modal
+            </button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">
+                  Press ESC key or click the button below to close
+                </p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </div>
 
           <!-- card-2 -->
-          <div class="flex flex-col gap-20 shadow-2xl py-4 px-4 lg:flex-row">
+          <div class="flex flex-col gap-20 shadow-md py-4 px-4 lg:flex-row">
             <div class="lg:w-[950px] lg:ml-8">
               <img
                 class="lg:w-full h-[350px] rounded-lg"
@@ -155,8 +184,11 @@
               </button>
             </div>
           </div>
+
           <!-- card-3 -->
-          <div class="flex flex-col gap-20 shadow-2xl py-4 px-4 lg:flex-row">
+          <div
+            class="flex flex-col gap-20 shadow-md space-y-5 py-4 px-4 lg:flex-row"
+          >
             <div class="lg:w-[550px] lg:ml-8">
               <img
                 class="w-full h-[380px] rounded-lg"
@@ -210,9 +242,5 @@
         </div>
       </section>
     </main>
-
-    <footer>
-      <!-- <h1>j</h1> -->
-    </footer>
   </body>
 </html>
