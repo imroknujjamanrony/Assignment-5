@@ -5,18 +5,16 @@ document
   .addEventListener("click", function () {
     const donateMoney = getInputFieldValueById("inputfield-1");
     const accountBalance = document.getElementById("card-balance-1").innerText;
-    const accountBalanceNumber = parseFloat(accountBalance);
-    if (
-      isNaN(donateMoney) ||
-      donateMoney <= 0 ||
-      donateMoney > accountBalanceNumber
-    ) {
+    const accountBalanceNumber1 = parseFloat(accountBalance);
+    const myBalance1 = parseFloat(myBalance);
+
+    if (isNaN(donateMoney) || donateMoney <= 0 || donateMoney > myBalance1) {
       alert(
         "Please enter a valid donation amount within your balance.Or try again."
       );
       return;
     }
-    const UpdateBalance1 = accountBalanceNumber + donateMoney;
+    const UpdateBalance1 = accountBalanceNumber1 + donateMoney;
     document.getElementById("card-balance-1").innerText = UpdateBalance1;
 
     const updatedMyBalance = parseFloat(myBalance);
@@ -32,7 +30,11 @@ document
     historyDiv.className =
       "bg-white p-5 rounded-lg border-2 border-gray-400 mb-4 shadow-lg mx-10";
     historyDiv.innerHTML = `
-        
+    
+        <p class='text-lg text-gray-700'> <span> ${donateMoney} Taka is Donated For ${cardTitle1} </span>
+
+
+
    <p class='text-xs text-gray-500'>
   ${new Date().toLocaleDateString("en-GB")} ${new Date().toLocaleTimeString(
       "en-GB",
@@ -43,7 +45,6 @@ document
 
 
 
-    <p class='text-lg text-gray-700'> <span> ${donateMoney} Taka is Donated For ${cardTitle1} </span>
     
     `;
     document.getElementById("history-section").appendChild(historyDiv);
@@ -56,18 +57,15 @@ document
   .addEventListener("click", function () {
     const donateMoney = getInputFieldValueById("inputfield-2");
     const accountBalance = document.getElementById("card-balance-2").innerText;
-    const accountBalanceNumber = parseFloat(accountBalance);
-    if (
-      isNaN(donateMoney) ||
-      donateMoney <= 0 ||
-      donateMoney > accountBalanceNumber
-    ) {
+    const accountBalanceNumber2 = parseFloat(accountBalance);
+    const myBalance2 = parseFloat(myBalance);
+    if (isNaN(donateMoney) || donateMoney <= 0 || donateMoney > myBalance2) {
       alert(
         "Please enter a valid donation amount within your balance.Or try again."
       );
       return;
     }
-    const UpdateBalance1 = accountBalanceNumber + donateMoney;
+    const UpdateBalance1 = accountBalanceNumber2 + donateMoney;
     document.getElementById("card-balance-2").innerText = UpdateBalance1;
 
     const updatedMyBalance = parseFloat(myBalance);
@@ -84,7 +82,18 @@ document
       "bg-white p-5 rounded-lg border-2 border-gray-400 mb-4 shadow-lg mx-10";
     historyDiv.innerHTML = `
     
-    <p class='text-lg text-gray-700'> <span> ${donateMoney} Taka is Donated For ${cardTitle2} </span>
+
+        <p class='text-lg text-gray-700'> <span> ${donateMoney} Taka is Donated For ${cardTitle2} </span>
+
+
+
+    <p class='text-xs text-gray-500'>
+  ${new Date().toLocaleDateString("en-GB")} ${new Date().toLocaleTimeString(
+      "en-GB",
+      { hour12: false }
+    )} Bangladesh Standard Time (GMT+6)
+</p>
+
     
     
     `;
@@ -98,19 +107,16 @@ document
   .addEventListener("click", function () {
     const donateMoney = getInputFieldValueById("inputfield-3");
     const accountBalance = document.getElementById("card-balance-3").innerText;
-    const accountBalanceNumber = parseFloat(accountBalance);
+    const accountBalanceNumber3 = parseFloat(accountBalance);
+    const myBalance3 = parseFloat(myBalance);
 
-    if (
-      isNaN(donateMoney) ||
-      donateMoney <= 0 ||
-      donateMoney > accountBalanceNumber
-    ) {
+    if (isNaN(donateMoney) || donateMoney <= 0 || donateMoney > myBalance3) {
       alert(
         "Please enter a valid donation amount within your balance.Or try again."
       );
       return;
     }
-    const UpdateBalance1 = accountBalanceNumber + donateMoney;
+    const UpdateBalance1 = accountBalanceNumber3 + donateMoney;
     document.getElementById("card-balance-3").innerText = UpdateBalance1;
     const updatedMyBalance = parseFloat(myBalance);
     const newBalance = updatedMyBalance - donateMoney;
@@ -123,8 +129,16 @@ document
     historyDiv.className =
       "bg-white p-5 rounded-lg border-2 border-gray-400 mb-4 shadow-lg mx-10";
     historyDiv.innerHTML = `
-    
-    <p class='text-lg text-gray-700'> <span> ${donateMoney} Taka is Donated For ${cardTitle3} </span>
+     
+        <p class='text-lg text-gray-700'> <span> ${donateMoney} Taka is Donated For ${cardTitle3} </span>
+
+    <p class='text-xs text-gray-500'>
+  ${new Date().toLocaleDateString("en-GB")} ${new Date().toLocaleTimeString(
+      "en-GB",
+      { hour12: false }
+    )} Bangladesh Standard Time (GMT+6)
+</p>
+
     
     
     `;
@@ -135,10 +149,34 @@ document
 
 document.getElementById("history-btn").addEventListener("click", function () {
   showSectionById("history-section");
+
+  // History button active (green)
+  this.classList.remove("bg-gray-300", "text-black");
+  this.classList.add("bg-lime-400", "text-white");
+
+  // Donate button inactive (gray)
+  document
+    .getElementById("donate-btn")
+    .classList.remove("bg-lime-400", "text-white");
+  document
+    .getElementById("donate-btn")
+    .classList.add("bg-gray-300", "text-black");
 });
 
 //donate btn
 
 document.getElementById("donate-btn").addEventListener("click", function () {
   showSectionById("section-1");
+
+  // Donate button active (green)
+  this.classList.remove("bg-gray-300", "text-black");
+  this.classList.add("bg-lime-400", "text-white");
+
+  // History button inactive (gray)
+  document
+    .getElementById("history-btn")
+    .classList.remove("bg-lime-400", "text-white");
+  document
+    .getElementById("history-btn")
+    .classList.add("bg-gray-300", "text-black");
 });
