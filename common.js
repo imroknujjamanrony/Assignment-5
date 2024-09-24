@@ -4,7 +4,7 @@ function getInputFieldValueById(id) {
   return InputValueNumber;
 }
 
-function showSectionById(id) {
-  document.getElementById("section-1").classList.add("hidden");
-  document.getElementById(id).classList.remove("hidden");
+function showSectionById(id1, id2) {
+  document.getElementById(id1).classList.add("hidden");
+  document.getElementById(id2).classList.remove("hidden");
 }

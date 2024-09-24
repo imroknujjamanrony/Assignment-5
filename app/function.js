@@ -48,6 +48,7 @@ document
     
     `;
     document.getElementById("history-section").appendChild(historyDiv);
+    document.getElementById("inputfield-1").value = "";
   });
 
 //for card 2
@@ -98,6 +99,7 @@ document
     
     `;
     document.getElementById("history-section").appendChild(historyDiv);
+    document.getElementById("inputfield-2").value = "";
   });
 
 //card-3
@@ -143,12 +145,13 @@ document
     
     `;
     document.getElementById("history-section").appendChild(historyDiv);
+    document.getElementById("inputfield-3").value = "";
   });
 
 // history
 
 document.getElementById("history-btn").addEventListener("click", function () {
-  showSectionById("history-section");
+  showSectionById("section-1", "history-section");
 
   // History button active (green)
   this.classList.remove("bg-gray-300", "text-black");
@@ -166,7 +169,7 @@ document.getElementById("history-btn").addEventListener("click", function () {
 //donate btn
 
 document.getElementById("donate-btn").addEventListener("click", function () {
-  showSectionById("section-1");
+  showSectionById("history-section", "section-1");
 
   // Donate button active (green)
   this.classList.remove("bg-gray-300", "text-black");
