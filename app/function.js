@@ -1,5 +1,5 @@
 let myBalance = document.getElementById("my-balance").innerText;
-//added event listener
+
 document
   .getElementById("donate-now-btn")
   .addEventListener("click", function () {
@@ -32,9 +32,18 @@ document
     historyDiv.className =
       "bg-white p-5 rounded-lg border-2 border-gray-400 mb-4 shadow-lg mx-10";
     historyDiv.innerHTML = `
-    
+        
+   <p class='text-xs text-gray-500'>
+  ${new Date().toLocaleDateString("en-GB")} ${new Date().toLocaleTimeString(
+      "en-GB",
+      { hour12: false }
+    )} Bangladesh Standard Time (GMT+6)
+</p>
+
+
+
+
     <p class='text-lg text-gray-700'> <span> ${donateMoney} Taka is Donated For ${cardTitle1} </span>
-    
     
     `;
     document.getElementById("history-section").appendChild(historyDiv);
