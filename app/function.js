@@ -153,11 +153,9 @@ document
 document.getElementById("history-btn").addEventListener("click", function () {
   showSectionById("section-1", "history-section");
 
-  // History button active (green)
   this.classList.remove("bg-gray-300", "text-black");
   this.classList.add("bg-lime-400", "text-white");
 
-  // Donate button inactive (gray)
   document
     .getElementById("donate-btn")
     .classList.remove("bg-lime-400", "text-white");
@@ -171,11 +169,9 @@ document.getElementById("history-btn").addEventListener("click", function () {
 document.getElementById("donate-btn").addEventListener("click", function () {
   showSectionById("history-section", "section-1");
 
-  // Donate button active (green)
   this.classList.remove("bg-gray-300", "text-black");
   this.classList.add("bg-lime-400", "text-white");
 
-  // History button inactive (gray)
   document
     .getElementById("history-btn")
     .classList.remove("bg-lime-400", "text-white");
