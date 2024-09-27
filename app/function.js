@@ -1,9 +1,9 @@
-let myBalance = document.getElementById("my-balance").innerText;
-
 document
   .getElementById("donate-now-btn")
   .addEventListener("click", function () {
     const donateMoney = getInputFieldValueById("inputfield-1");
+    let myBalance = document.getElementById("my-balance").innerText;
+
     const accountBalance = document.getElementById("card-balance-1").innerText;
     const accountBalanceNumber1 = parseFloat(accountBalance);
     const myBalance1 = parseFloat(myBalance);
@@ -57,6 +57,8 @@ document
   .getElementById("donate-now-btn-2")
   .addEventListener("click", function () {
     const donateMoney = getInputFieldValueById("inputfield-2");
+    let myBalance = document.getElementById("my-balance").innerText;
+
     const accountBalance = document.getElementById("card-balance-2").innerText;
     const accountBalanceNumber2 = parseFloat(accountBalance);
     const myBalance2 = parseFloat(myBalance);
@@ -108,6 +110,8 @@ document
   .getElementById("donate-now-btn-3")
   .addEventListener("click", function () {
     const donateMoney = getInputFieldValueById("inputfield-3");
+    let myBalance = document.getElementById("my-balance").innerText;
+
     const accountBalance = document.getElementById("card-balance-3").innerText;
     const accountBalanceNumber3 = parseFloat(accountBalance);
     const myBalance3 = parseFloat(myBalance);
